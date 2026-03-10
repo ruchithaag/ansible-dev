@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage("Transfer Deployment Playbook") {
+        stage('Transfer Deployment Playbook') {
             steps {
                 sh '''
                 set -e
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage("Run Ansible Playbook") {
+        stage('Run Ansible Playbook') {
             steps {
                 sh '''
                 set -e
@@ -29,6 +29,5 @@ pipeline {
                 '''
             }
         }
-
     }
 }
